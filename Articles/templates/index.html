@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <ul>
+    {% for articles in last_articles %}
+        <div>
+          <h1>{{ articles.article }} </h1>
+          {{ articles.article_text }}
+        </div>
+    {% endfor %}
+    </ul>
+</body>
+</html>
