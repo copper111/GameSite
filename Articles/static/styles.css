@@ -1,0 +1,34 @@
+ .header, .sidebar, .content, .footer {
+    padding: 10px; /* Поля */
+    border: solid 1px #000; /* Параметры рамки */
+    background: #e3e8cc; /* Цвет фона */
+   }
+   .header { /* Верхняя часть с заголовком */
+    background: #e3e8cc; /* Цвет фона */
+    font-size: 24px; /* Размер шрифта */
+   }
+   .layout {
+    margin: 15px 0; /* Отступы сверху и снизу */
+    overflow: hidden; /* Отменяем действие float */
+    min-width: 800px; /* Минимальная ширина */
+    max-width: 1200px; /* Максимальная ширина */
+   }
+   .sidebar { /* Навигация по сайту */
+    width: 100px; /* Ширина меню */
+    float: left; /* Состыковка с другим слоем по горизонтали */
+   }
+   .sidebar ul {
+    list-style: none; /* Убираем маркеры */
+    padding: 0; /* Убираем отступы */
+   }
+   .content { /* Основное содержание страницы */
+    margin-left: 135px; /* Отступ слева */
+   }
+    .footer {
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    background: #39b54a; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+    }
