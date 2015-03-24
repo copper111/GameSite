@@ -18,3 +18,8 @@ class Article (models.Model):
     create_date = models.DateTimeField('date published')
     def __str__(self):              # __unicode__ on Python 2
         return self.article
+
+
+class Image(models.Model):
+    file = models.ImageField(upload_to='Articles')
+    fileInfo = models.CharField(max_length=2000)
