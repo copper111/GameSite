@@ -96,6 +96,6 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
 )
 
-MEDIA_ROOT = '/Images/'
+MEDIA_ROOT = 'Images'
 
-MEDIA_URL = '/Images/'
+MEDIA_URL = 'Images/'

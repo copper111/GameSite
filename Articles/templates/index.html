@@ -23,6 +23,12 @@
   <link rel="stylesheet" type="text/css" href="../static/styles.css">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Две колонки</title>
+  <style>
+   body {
+    background-image: url(/Images/Articles/maxresdefault.jpg); /* Путь к фоновому изображению */
+   background-color: #c7b39b; /* Цвет фона */
+   }
+  </style>
  </head>
  <body>
   <div class="header">Заголовок сайта</div>
@@ -37,9 +43,12 @@
     </ul>
    </div>
    <div class="content">
-         <img src={{  backgroundImage.file }} alt="Бэкгрунд"/>
-        <p>{{ backgroundImage.fileInfo }}</p>
-          {% for articles in last_articles %}
+    {% for image in backgrounds %}
+         {{ image.file.url }}
+        {{ image.file.width }}
+        {{ image.file.height     }}
+    {% endfor %}
+    {% for articles in last_articles %}
         <div>
           <h1>{{ articles.article }} </h1>
           {{ articles.article_text }}
