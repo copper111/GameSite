@@ -14,8 +14,52 @@
  </head>
  <body>
   <div class="header">Заголовок сайта</div>
+
    <div class="centerLayer">
-     <a href="{% url 'articles' %}">Статьи</a>
+      <table class="mainMenuTable">
+          <tr>
+              <td class="mmTd" background= "/Images/Articles/maxresdefault.jpg">
+                  <div class="view view-first">
+                     <img src="/Images/Articles/teemo-2.jpg" />
+                         <div class="mask">
+                             <h2>Статьи</h2>
+                             <p>Заметки о LoL</p>
+                             <a href="{% url 'articles' %}">Лента статей</a>
+                         </div>
+                  </div>
+              </td>
+              <td class="mmTd">
+                  <div class="view view-first">
+                     <img src="/Images/Articles/teemo-2.jpg"/>
+                         <div class="mask">
+                             <h2>Чемпионы</h2>
+                             <p>Характеристика чемпионов</p>
+                             <a href="{% url 'articles' %}">Список чемпионов</a>
+                         </div>
+                  </div>
+              </td>
+              <td class="mmTd">
+                  <div class="view view-first">
+                     <img src="/Images/Articles/teemo-2.jpg" />
+                         <div class="mask">
+                             <h2>Поиск игр</h2>
+                             <p>Найти игру</p>
+                             <a href="{% url 'articles' %}">Сведения по игре</a>
+                         </div>
+                  </div>
+              </td>
+              <td class="mmTd">
+                  <div class="view view-first">
+                     <img src="/Images/Articles/teemo-2.jpg" />
+                         <div class="mask">
+                             <h2>История игр</h2>
+                             <p>Последние 10 матчей</p>
+                             <a href="{% url 'articles' %}">История игр</a>
+                         </div>
+                  </div>
+              </td>
+          </tr>
+      </table>
    </div>
   <div class="footer">Подвал</div>
  </body>
