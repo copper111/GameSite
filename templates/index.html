@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href={% static "styles.css" %}/>
+    <title>Две колонки</title>
+      <style>
+          body {
+              background-image: url(/Images/Articles/maxresdefault.jpg); /* Путь к фоновому изображению */
+              background-color: #c7b39b;
+
+          /* Цвет фона */
+      </style>
+</head>
+<body>
+<div class="header">Заголовок сайта</div>
+
+<div class="centerLayer">
+    <table class="mainMenuTable">
+        <tr>
+            <td class="mmTd" background="/Images/Articles/maxresdefault.jpg">
+                <div class="view view-first">
+                    <img src="/Images/menu_bn_teemo-2.jpg"/>
+
+                    <div class="mask">
+                        <h2>Статьи</h2>
+
+                        <p>Заметки о LoL</p>
+                        <a href="{% url 'articles' %}">Лента статей</a>
+                    </div>
+                </div>
+            </td>
+            <td class="mmTd">
+                <div class="view view-first">
+                    <img src="/Images/menu_bn_teemo-2.jpg"/>
+
+                    <div class="mask">
+                        <h2>Чемпионы</h2>
+
+                        <p>Характеристика чемпионов</p>
+                        <a href="{% url 'articles' %}">Список чемпионов</a>
+                    </div>
+                </div>
+            </td>
+            <td class="mmTd">
+                <div class="view view-first">
+                    <img src="/Images/menu_bn_teemo-2.jpg"/>
+
+                    <div class="mask">
+                        <h2>Поиск игр</h2>
+
+                        <p>Найти игру</p>
+                        <a href="{% url 'articles' %}">Сведения по игре</a>
+                    </div>
+                </div>
+            </td>
+            <td class="mmTd">
+                <div class="view view-first">
+                    <img src="/Images/menu_bn_teemo-2.jpg"/>
+
+                    <div class="mask">
+                        <h2>История игр</h2>
+
+                        <p>Последние 10 матчей</p>
+                        <a href="{% url 'articles' %}">История игр</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="footer">Подвал</div>
+</body>
+</html>

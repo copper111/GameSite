@@ -1,159 +1,202 @@
- .header, .sidebar, .content, .footer {
+/*общий стиль для тела страницы*/
+.body {
+    background-image: url(/Images/Articles/maxresdefault.jpg); /* Путь к фоновому изображению */
+    background-color: #c7b39b; /* Цвет фона */
+}
+
+/*общие элементы страницы*/
+.header, .sidebar, .content, .footer {
     padding: 10px; /* Поля */
     border: solid 1px #000; /* Параметры рамки */
     background: #e3e8cc; /* Цвет фона */
-   }
-   .header { /* Верхняя часть с заголовком */
+}
+
+.header {
+    /* Верхняя часть с заголовком */
     background: #e3e8cc; /* Цвет фона */
     font-size: 24px; /* Размер шрифта */
-   }
-   .layout {
+}
+
+.layout {
     margin: 15px 0; /* Отступы сверху и снизу */
     overflow: hidden; /* Отменяем действие float */
     min-width: 800px; /* Минимальная ширина */
     /*max-width: 1200px; *//* Максимальная ширина */
     max-width: 60%;
-   }
-   .sidebar { /* Навигация по сайту */
-    width: 100px; /* Ширина меню */
+}
+
+.sidebar {
+    /* Навигация по сайту */
+    width: 350px; /* Ширина меню */
     float: left; /* Состыковка с другим слоем по горизонтали */
     height: 100%;
-   }
-   .sidebar ul {
+}
+
+.sidebar ul {
     list-style: none; /* Убираем маркеры */
     padding: 0; /* Убираем отступы */
-   }
-   .content { /* Основное содержание страницы */
-    margin-left: 135px; /* Отступ слева */
+}
 
-   }
-    .footer {
+.content {
+    /* Основное содержание страницы */
+    /*margin-left: 135px; *//* Отступ слева */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 20%; /* Положение слоя от левого края */
+    right: 20%;
+    padding: 10px; /* Поля вокруг текста */
+    overflow: auto; /* Добавление полосы прокрутки */
+    margin-right: 10px;
+    margin-bottom: 35px;
+}
+
+.footer {
     position: fixed; /* Фиксированное положение */
-    left: 0; bottom: 0; /* Левый нижний угол */
+    left: 0;
+    bottom: 0; /* Левый нижний угол */
     padding: 10px; /* Поля вокруг текста */
     background: #39b54a; /* Цвет фона */
     color: #fff; /* Цвет текста */
     width: 100%; /* Ширина слоя */
-    }
+}
 
-    .centerLayer {
+.centerLayer {
     position: absolute; /* Абсолютное позиционирование */
     left: 20%; /* Положение слоя от левого края */
     top: 60%; /* Положение слоя от верхнего края */
     border: solid 1px wheat; /* Параметры рамки вокруг */
     padding: 10px; /* Поля вокруг текста */
     overflow: auto; /* Добавление полосы прокрутки */
-   }
+}
 
-   .mainMenuTable {
+.mainMenuTable {
     /*border: solid 1px wheat;*/
     width: 600px;
     height: 200px;
-   }
+}
 
-   .mmTd{
+.mmTd {
     /*border: solid 1px wheat;*/
     width: 150px;
     height: 190px;
-   }
-
-
-   /*test css*/
- .view {
- width: 200px;
- height: 200px;
- margin: 10px;
- float: left;
- border: 10px solid #fff;
- overflow: hidden;
- position: relative;
- text-align: center;
- box-shadow: 1px 1px 2px #e6e6e6;
- cursor: default;
- background: #fff url(/Images/Articles/teemo-2.jpg) no-repeat center center
 }
+
+/*test css*/
+.view {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    background: #fff url(/Images/menu_bn_teemo-2.jpg) no-repeat center center
+}
+
 .view .mask, .view .content {
- width: 200px;
- height: 200px;
- position: absolute;
- overflow: hidden;
- top: 0;
- left: 0
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
 }
+
 .view img {
- display: block;
- position: relative
+    display: block;
+    position: relative
 }
+
 .view h2 {
- text-transform: uppercase;
- color: #fff;
- text-align: center;
- position: relative;
- font-size: 17px;
- padding: 10px;
- background: rgba(0, 0, 0, 0.8);
- margin: 20px 0 0 0
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
 }
+
 .view p {
- font-family: Georgia, serif;
- font-style: italic;
- font-size: 12px;
- position: relative;
- color: #fff;
- padding: 10px 20px 20px;
- text-align: center
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
 }
+
 .view a.info {
- display: inline-block;
- text-decoration: none;
- padding: 7px 14px;
- background: #000;
- color: #fff;
- text-transform: uppercase;
- box-shadow: 0 0 1px #000
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
 }
+
 .view a.info:hover {
- box-shadow: 0 0 5px #000
+    box-shadow: 0 0 5px #000
 }
 
 .view-first img {
- transition: all 0.2s linear;
+    transition: all 0.2s linear;
 }
+
 .view-first .mask {
- opacity: 0;
- background-color: rgba(219,127,8, 0.7);
- transition: all 0.4s ease-in-out;
+    opacity: 0;
+    background-color: rgba(219, 127, 8, 0.7);
+    transition: all 0.4s ease-in-out;
 }
+
 .view-first h2 {
- transform: translateY(-100px);
- opacity: 0;
- transition: all 0.2s ease-in-out;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
 }
+
 .view-first p {
- transform: translateY(100px);
- opacity: 0;
- transition: all 0.2s linear;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.2s linear;
 }
-.view-first a.info{
- opacity: 0;
- transition: all 0.2s ease-in-out;
+
+.view-first a.info {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
 }
 
 .view-first:hover img {
- transform: scale(1.1);
+    transform: scale(1.1);
 }
+
 .view-first:hover .mask {
- opacity: 1;
+    opacity: 1;
 }
+
 .view-first:hover h2,
 .view-first:hover p,
 .view-first:hover a.info {
- opacity: 1;
- transform: translateY(0px);
+    opacity: 1;
+    transform: translateY(0px);
 }
+
 .view-first:hover p {
- transition-delay: 0.1s;
+    transition-delay: 0.1s;
 }
+
 .view-first:hover a.info {
- transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+
+
+/*********ARTICLE********/
+.article_block {
+    border: 10px solid #fff;
 }

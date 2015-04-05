@@ -4,6 +4,6 @@ from django.conf import settings
 from Articles import views
 
 urlpatterns = patterns('',
-    url(r'^index/', views.index, name='index'),
-    url(r'^articles/', views.articles, name='articles'),
-) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                       url(r'^articles/', views.articles, name='articles'),
+                       ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL,
+                                                                                                    document_root=settings.MEDIA_ROOT)

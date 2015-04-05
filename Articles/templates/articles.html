@@ -1,64 +1,51 @@
-{#<!DOCTYPE html>#}
-{#<html>#}
-{#<head lang="en">#}
-{#    <meta charset="UTF-8">#}
-{#    <title></title>#}
-{#</head>#}
-{#<body>#}
-{#    <ul>#}
-{#    {% for articles in last_articles %}#}
-{#        <div>#}
-{#          <h1>{{ articles.article }} </h1>#}
-{#          {{ articles.article_text }}#}
-{#        </div>#}
-{#    {% endfor %}#}
-{#    </ul>#}
-{#</body>#}
-{#</html>#}
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
- <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  {% load staticfiles %}
-  <link rel="stylesheet" type="text/css" href={% static "styles.css" %} />
-  <title>Две колонки</title>
-  <style>
-   body {
-    background-image: url(/Images/Articles/maxresdefault.jpg); /* Путь к фоновому изображению */
-    background-color: #c7b39b; /* Цвет фона */
-   }
-  </style>
- </head>
- <body>
-  <div class="header">Заголовок сайта</div>
-  <div class="layout">
-   <div class="sidebar">
-    <h2>Меню</h2>
-    <ul>
-     <li><a href="link1.html">Ссылка 1</a></li>
-     <li><a href="link2.html">Ссылка 2</a></li>
-     <li><a href="link3.html">Ссылка 3</a></li>
-     <li><a href="link4.html">Ссылка 4</a></li>
-    </ul>
-   </div>
-   <div class="content">
-    {% for image in backgrounds %}
-         {{ image.file.url }}
-        {{ image.file.width }}
-        {{ image.file.height     }}
-        {% load staticfiles %}
-        <img src={{ image.file.url }}  alt="1"/>
-    {% endfor %}
-    {% for articles in last_articles %}
-        <div>
-          <h1>{{ articles.article }} </h1>
-          {{ articles.article_text }}
-        </div>
-    {% endfor %}
-   </div>
-  </div>
-  <div class="footer">Подвал</div>
- </body>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href={% static "styles.css" %}/>
+    <title>Две колонки</title>
+    <style>
+        body {
+            background-image: url(/Images/Articles/maxresdefault.jpg); /* Путь к фоновому изображению */
+            background-color: #c7b39b; /* Цвет фона */
+        }
+    </style>
+</head>
+<body>
+<div class="header">Заголовок сайта</div>
+<div class="layout">
+    <div class="sidebar">
+        <h2>Меню</h2>
+        <ul>
+            <li><a href="link1.html">Ссылка 1</a></li>
+            <li><a href="link2.html">Ссылка 2</a></li>
+            <li><a href="link3.html">Ссылка 3</a></li>
+            <li><a href="link4.html">Ссылка 4</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        {% for articles in last_articles %}
+            <div class="article_block">
+                <h1>{{ articles.article }} </h1>
+                {% for image in backgrounds %}
+                    {{ image.file.url }}
+                    {{ image.file.width }}
+                    {{ image.file.height }}
+                    <img src={{ image.file.url }} height="100" width="100" alt="1"/>
+                {% endfor %}
+
+
+                {{ articles.header_image.url }}
+
+                <img src="{{ articles.header_image.url }}" alt="My image"/>
+
+                {{ articles.article_text }}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="footer">Подвал</div>
+</body>
 </html>
