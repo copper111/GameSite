@@ -68,6 +68,7 @@
     overflow: auto; /* Добавление полосы прокрутки */
 }
 
+/*Главное меню*/
 .mainMenuTable {
     /*border: solid 1px wheat;*/
     width: 600px;
@@ -199,4 +200,29 @@
 /*********ARTICLE********/
 .article_block {
     border: 10px solid #fff;
+}
+
+.article_img {
+    position: relative;
+    align-self: center;
+}
+
+/*Увеличение объекта в N раз*/
+.transition-scale {
+  position: relative;
+  z-index: 2;
+  background: #808991;
+  color: #FFF;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  max-width: 800px;
+  font-size: 20px;
+  border: 4px ridge black;
+  cursor: pointer;
+  transition: 1s linear;
+}
+.transition-scale:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
 }

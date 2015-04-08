@@ -12,8 +12,15 @@
             background-color: #c7b39b; /* Цвет фона */
         }
     </style>
+    <script src="//vk.com/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>
 </head>
 <body>
+<script type="text/javascript">
+    VK.init({
+        apiId: 4867049,
+        onlyWidgets: true
+    });
+</script>
 <div class="header">Заголовок сайта</div>
 <div class="layout">
     <div class="sidebar">
@@ -27,12 +34,28 @@
     </div>
     <div class="content">
         {% for articles in last_articles %}
-            <div class="article_block">
-                <h1>{{ articles.article }} </h1>
-                {{ articles.header_image.url }}
-                <img src="{{ articles.header_image.url }}" height="{{ articles.header_image.height }}" width="{{ articles.header_image.width }}" alt="My image"/>
+            <div >
+                <div>
+                    <h1>{{ articles.article }} </h1>
+                </div>
+                <div >
 
-                {{ articles.article_text }}
+                    <img class="article_img"
+
+                         src="{{ articles.header_image.url }}" height="200"
+                         width="300" alt="My image"/>
+                </div>
+
+                <div>
+                    {{ articles.article_text }}
+                </div>
+
+
+                <div id="vk_comments"></div>
+                <script type="text/javascript">
+                    VK.Widgets.Comments('vk_comments');
+                </script>
+
             </div>
         {% endfor %}
     </div>
