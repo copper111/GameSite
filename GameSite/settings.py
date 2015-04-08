@@ -106,3 +106,4 @@ MEDIA_ROOT = 'Images'
 
 MEDIA_URL = '/Images/'
 
+
