@@ -200,6 +200,12 @@
 /*********ARTICLE********/
 .article_block {
     border: 10px solid #fff;
+    padding: 10px;
+}
+
+.text {
+    margin: auto;
+    padding: 10px;
 }
 
 .article_img {
