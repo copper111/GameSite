@@ -53,7 +53,7 @@
     position: absolute; /* Абсолютное позиционирование */
     left: 20%; /* Положение слоя от левого края */
     right: 20%;
-    padding: 10px; /* Поля вокруг текста */
+    padding: 20px; /* Поля вокруг текста */
     overflow: hidden;  /*Добавление полосы прокрутки*/
     margin-right: 10px;
     margin-bottom: 35px;

@@ -6,10 +6,12 @@
             <p>
                 {% csrf_token %}
                 <input type="text" name="summoner">
+                <select name="region">
+                    <option value="ru">RU</option>
+                    <option value="euw1">EU</option>
+                </select>
                 <input type="submit" value="Search">
             </p>
         </form>
-
-
     </div>
 {% endblock %}
