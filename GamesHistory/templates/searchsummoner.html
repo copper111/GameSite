@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="centerLayer">
+        <form action="{% url 'gameshistory' %}" method="get">
+            <p>
+                {% csrf_token %}
+                <input type="text" name="summoner">
+                <input type="submit" value="Search">
+            </p>
+        </form>
+
+
+    </div>
+{% endblock %}

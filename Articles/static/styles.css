@@ -1,25 +1,31 @@
 /*общий стиль для тела страницы*/
 .body {
     background-image: url(/Images/Articles/maxresdefault.jpg); /* Путь к фоновому изображению */
-    background-color: #c7b39b; /* Цвет фона */
+    background-color: #919191; /* Цвет фона */
 }
+
+
 
 /*общие элементы страницы*/
 .header, .sidebar, .content, .footer {
     padding: 10px; /* Поля */
-    border: solid 1px #000; /* Параметры рамки */
+    border: solid 1px #000; /* Параметры рамки*/
     background: #e3e8cc; /* Цвет фона */
 }
 
 .header {
     /* Верхняя часть с заголовком */
-    background: #e3e8cc; /* Цвет фона */
+    background: #768e98; /* Цвет фона */
     font-size: 24px; /* Размер шрифта */
+    position: fixed;
+    left: 0;
+    top: 0; /* Левый нижний угол */
+    width: 100%;
 }
 
 .layout {
-    margin: 15px 0; /* Отступы сверху и снизу */
-    overflow: hidden; /* Отменяем действие float */
+    margin: 15px 0; /* Отступы сверху и снизу*/
+    overflow: hidden;/* Отменяем действие float */
     min-width: 800px; /* Минимальная ширина */
     /*max-width: 1200px; *//* Максимальная ширина */
     max-width: 60%;
@@ -28,14 +34,18 @@
 .sidebar {
     /* Навигация по сайту */
     width: 350px; /* Ширина меню */
-    float: left; /* Состыковка с другим слоем по горизонтали */
+    /*float: left;  Состыковка с другим слоем по горизонтали */
     height: 100%;
+    position: fixed;
+    margin-top: 40px;
 }
 
 .sidebar ul {
     list-style: none; /* Убираем маркеры */
     padding: 0; /* Убираем отступы */
 }
+
+
 
 .content {
     /* Основное содержание страницы */
@@ -44,9 +54,10 @@
     left: 20%; /* Положение слоя от левого края */
     right: 20%;
     padding: 10px; /* Поля вокруг текста */
-    overflow: auto; /* Добавление полосы прокрутки */
+    overflow: hidden;  /*Добавление полосы прокрутки*/
     margin-right: 10px;
     margin-bottom: 35px;
+    margin-top: 40px;
 }
 
 .footer {
@@ -54,40 +65,40 @@
     left: 0;
     bottom: 0; /* Левый нижний угол */
     padding: 10px; /* Поля вокруг текста */
-    background: #39b54a; /* Цвет фона */
-    color: #fff; /* Цвет текста */
+    background: #768e98; /* Цвет фона */
+    color: #000000; /* Цвет текста */
     width: 100%; /* Ширина слоя */
 }
 
 .centerLayer {
-    position: absolute; /* Абсолютное позиционирование */
-    left: 20%; /* Положение слоя от левого края */
-    top: 60%; /* Положение слоя от верхнего края */
-    border: solid 1px wheat; /* Параметры рамки вокруг */
+    position: absolute; /* Абсолютное позиционирование*/
+    left: 25%; /* Положение слоя от левого края */
+    top: 40%; /* Положение слоя от верхнего края */
+    /*border: solid 1px wheat; *//* Параметры рамки вокруг */
     padding: 10px; /* Поля вокруг текста */
     overflow: auto; /* Добавление полосы прокрутки */
 }
 
 /*Главное меню*/
-.mainMenuTable {
+/*.mainMenuTable {*/
     /*border: solid 1px wheat;*/
-    width: 600px;
-    height: 200px;
-}
+    /*width: 600px;*/
+    /*height: 200px;*/
+/*}*/
 
-.mmTd {
+/*.mmTd {*/
     /*border: solid 1px wheat;*/
-    width: 150px;
-    height: 190px;
-}
+    /*width: 150px;*/
+    /*height: 190px;*/
+/*}*/
 
 /*test css*/
 .view {
     width: 200px;
     height: 200px;
-    margin: 10px;
+    margin: 0px;
     float: left;
-    border: 10px solid #fff;
+    border: 0px solid #fff;
     overflow: hidden;
     position: relative;
     text-align: center;
