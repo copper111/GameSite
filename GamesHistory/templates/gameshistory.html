@@ -3,8 +3,13 @@
 {% block content %}
     <div class="centerLayer">
         {{ summoner_name }}
-        {{ gson }}
+        {% for foo in champNameCollection %}
+           {{ foo }}
+        {% endfor %}
 
-    {{ mh }}
+        {{ chN }}
+{#        {{ gson }}#}
+
+{#    {{ mh }}#}
     </div>
 {% endblock %}
